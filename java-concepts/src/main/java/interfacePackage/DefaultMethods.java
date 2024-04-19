@@ -6,6 +6,7 @@ There is no compulsion of overriding in case of Deafult methods. If needed, the 
 
  */
 interface InterfaceWithDefaultMethod1{
+    public static final int i=10;
     void print();
     default void printDefaultMethod1(){
         System.out.println("DEFAULT - 1 in class 1");

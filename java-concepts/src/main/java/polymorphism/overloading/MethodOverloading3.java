@@ -5,7 +5,7 @@ public class MethodOverloading3 {
         MethodOverloading3 methodOverloading3 = new MethodOverloading3();
         methodOverloading3.m1("sree");
         methodOverloading3.m1(new StringBuffer("sree"));
-      //   methodOverloading3.m1(null);
+//         methodOverloading3.m1(null);
         //   -> ambiguity error. because there is no relation between string and string buffer. both are child classes of object class
     }
 

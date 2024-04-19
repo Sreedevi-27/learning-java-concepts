@@ -5,7 +5,7 @@ public class JoinExample implements Runnable{
         JoinExample joinExample = new JoinExample();
         Thread thread = new Thread(joinExample);
         thread.start();
-        thread.join(4000);
+        thread.join(4000);  // Wait unitll 4s, then continue its execution
         for(int i=0; i<10; i++)
             System.out.println("main"+i);
     }

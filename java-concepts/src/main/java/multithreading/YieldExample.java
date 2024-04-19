@@ -1,17 +1,22 @@
 package multithreading;
+// yield() method pauses the current executing thread and gives a chance to other threads with the same or higher priority
 
-public class YieldExample implements Runnable{
+public class YieldExample{
     public static void main(String[] args) throws InterruptedException {
-        YieldExample yieldExample = new YieldExample();
-        Thread thread = new Thread(yieldExample);
+        Yield1 yield1 = new Yield1();
+        Thread thread = new Thread(yield1);
         thread.start();
-        System.out.println("Main method - 1");
-        Thread.yield();
-        System.out.println("Main method");
+        for (int i=0; i<10; i++)
+            System.out.println("Main method");
     }
+}
 
+class Yield1 implements Runnable{
     @Override
     public void run() {
-        System.out.println("Run method");
+        for (int i=0; i<10; i++) {
+            System.out.println("Yield method");
+            Thread.yield();
+        }
     }
 }

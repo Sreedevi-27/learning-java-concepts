@@ -9,7 +9,6 @@ public class MethodOverloading2 {
         MethodOverloading2 methodOverloading2 = new MethodOverloading2();
         methodOverloading2.m1(new Object());
         methodOverloading2.m1("sree");
-        methodOverloading2.m1(null);
     }
 
     public void m1(Object obj){

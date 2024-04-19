@@ -26,10 +26,12 @@ class Abstract1Child1 extends AbstractClass1 {
 
     @Override
     public void m1() {
+        System.out.println("m1 in Abstract1Child1");
     }
 
     @Override
     public void m2() {
+        System.out.println("m2 in Abstract1Child1");
     }
 }
 
@@ -42,7 +44,7 @@ abstract class Abstract1Child2 extends AbstractClass1 {
 
     @Override
     public void m1() {
-
+        System.out.println("m1 in Abstract1Child2");
     }
 }
 
@@ -53,7 +55,13 @@ class Abstract1Child2GrandChild extends Abstract1Child2 {
 
     @Override
     public void m2() {
+        System.out.println("m2 in Abstract1Child2GrandChild");
+    }
 
+    public static void main(String[] args) {
+        Abstract1Child2 obj2 = new Abstract1Child2GrandChild(5);
+        obj2.m1();
+        obj2.m2();
     }
 }
 
